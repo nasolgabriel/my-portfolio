@@ -9,10 +9,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        lightmode: {
+          background: "var(--background-light)",
+          middleground: "var(--middleground-light)",
+          foreground: "var(--foreground-light)",
+        },
+        darkmode: {
+          background: "var(--background-dark)",
+          middleground: "var(--middleground-dark)",
+          foreground: "var(--foreground-dark)",
+        },
+      },
+      fontFamily: {
+        Sans: ["Source Sans Pro", "sans-serif"],
       },
     },
   },
+  
   plugins: [],
 } satisfies Config;
