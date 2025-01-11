@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: "Source Sans 3", sans-serif;
+}
+
+:root {
+  --s: 211px; /* Controls the size of the pattern */
+  --c1: #f0f0f0; /* First shade of grey */
+  --c2: #f3f3f3; /* Second shade of grey */
+}
+
+.background-pattern {
+  background: 
+    repeating-conic-gradient(var(--c1) 0 45deg, var(--c2) 0 90deg)
+    0 / var(--s) var(--s);
+}

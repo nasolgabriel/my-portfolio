@@ -6,25 +6,31 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // theme: {
+  //   extend: {
+  //     colors: {
+  //       lightmode: {
+  //         background: "var(--background-light)",
+  //         middleground: "var(--middleground-light)",
+  //         foreground: "var(--foreground-light)",
+  //       },
+  //       darkmode: {
+  //         background: "var(--background-dark)",
+  //         middleground: "var(--middleground-dark)",
+  //         foreground: "var(--foreground-dark)",
+  //       },
+  //     },
   theme: {
     extend: {
       colors: {
-        lightmode: {
-          background: "var(--background-light)",
-          middleground: "var(--middleground-light)",
-          foreground: "var(--foreground-light)",
-        },
-        darkmode: {
-          background: "var(--background-dark)",
-          middleground: "var(--middleground-dark)",
-          foreground: "var(--foreground-dark)",
-        },
+        background: "#ffffff", // White
+        foreground: "#f2f2f2", // Grey
       },
       fontFamily: {
-        Sans: ["Source Sans Pro", "sans-serif"],
+        Sans: ["Source Sans 3", "sans-serif"],
       },
     },
   },
-  
+
   plugins: [],
 } satisfies Config;
