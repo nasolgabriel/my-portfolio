@@ -3,44 +3,78 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useThemeContext } from "@/contexts/ThemeProvider";
-import { assets, Brightness4, MenuIcon } from "@/assets/assets";
+import { Brightness4 } from "@/assets/assets"; // Adjust the import based on your actual path
 import { Button } from "@mui/material";
 import closeUpPic from "../../assets/gab-Photoroom.png";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
-    <nav className="fixed top-0 z-[40] w-full h-[90px] bg-white flex justify-between items-center md:px-20 text-stone-600 text-lg shadow-lg">
+    <nav className="fixed top-0 z-[40] w-full h-[90px] bg-white flex justify-between items-center md:px-20 text-stone-600 text-lg shadow-lg pr-3">
       <div className="flex items-center gap-2 px-2">
         <div className="w-[60px] h-[60px] rounded-full overflow-hidden border-2 border-transparent">
           <Image src={closeUpPic} alt="my picture" />
         </div>
         <span className="text-lg font-bold">GABRIEL NASOL</span>
       </div>
-      <ul className="hidden md:flex justify-items-center gap-10 font-bold tracking-wide">
+
+      <ul className="hidden lg:flex justify-items-center gap-10 font-bold tracking-wide">
         <Link href="#">HOME</Link>
-        <Link href="#">ABOUT </Link>
+        <Link href="#">ABOUT</Link>
         <Link href="#">PROJECTS</Link>
         <Link href="#">CONTACT</Link>
         <Brightness4 className="cursor-pointer" />
       </ul>
 
-      {/* ------hamburger menu------ */}
-      <div className="space-y-1 group md:hidden ml-3">
-        <Button>
-          <MenuIcon fontSize="large" sx={{ color: "#4B5563" }} />
-        </Button>
+      {/* Hamburger MMenu Icon */}
+      <div
+        id="nav-icon3"
+        className={`relative w-10 h-10 cursor-pointer lg:hidden ${
+          menuOpen ? "open" : ""
+        }`}
+        onClick={toggleMenu}
+      >
+        <span className="absolute block w-full h-1 rounded transition-all duration-300 ease-in-out top-0 left-0"></span>
+        <span className="absolute block w-full h-1 rounded transition-all duration-300 ease-in-out top-[10px] left-0"></span>
+        <span className="absolute block w-full h-1 rounded transition-all duration-300 ease-in-out top-[10px] left-0"></span>
+        <span className="absolute block w-full h-1 rounded transition-all duration-300 ease-in-out top-[20px] left-0"></span>
       </div>
-      {/* ---menu--- */}
-      <ul className="flex flex-col bg-white w-screen pb-10 absolute left-0 top-0 transition-all duration-300 ease-in-out space-y-4 justify-end items-center">
-        <Link className="flex items-center justify-center w-full h-full hover:bg-slate-200" href="#">HOME</Link>
-        <Link className="flex items-center justify-center w-full h-full hover:bg-slate-200" href="#">ABOUT</Link>
-        <Link className="flex items-center justify-center w-full h-full hover:bg-slate-200" href="#">PROJECTS</Link>
-        <Link className="flex items-center justify-center w-full h-full hover:bg-slate-200" href="#">CONTACT</Link>
+
+      {/* Mobile Menu */}
+      <ul
+        className={`flex flex-col bg-white w-screen pb-10 absolute left-0 transition-all duration-300 ease-in-out space-y-4 justify-end items-center ${
+          menuOpen ? "top-[90px]" : "top-[-250%]"
+        }`}
+      >
+        <Link
+          className="flex items-center justify-center w-full h-full "
+          href="#"
+        >
+          HOME
+        </Link>
+        <Link
+          className="flex items-center justify-center w-full h-full "
+          href="#"
+        >
+          ABOUT
+        </Link>
+        <Link
+          className="flex items-center justify-center w-full h-full "
+          href="#"
+        >
+          PROJECTS
+        </Link>
+        <Link
+          className="flex items-center justify-center w-full h-full"
+          href="#"
+        >
+          CONTACT
+        </Link>
         <Brightness4 className="cursor-pointer" />
       </ul>
-
-
     </nav>
   );
 };
