@@ -8,11 +8,11 @@ import { MdOutlineFileDownload } from "react-icons/md";
 const Header = () => {
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center background-pattern px-5">
-      <div className=" text-center lg:px-20 text-[#111]">
-        <h1 className="font-Sans font-bold text-[40px] md:text-[25px] lg:text-[55px] leading-[1.3] mb-2">
+      <div className=" text-center lg:px-20 text-[#111] pb-15">
+        <h1 className="font-Sans font-bold text-[40px] md:text-[25px] lg:text-[65px] leading-[1.3] mb-8 tracking-wider">
           HELLO THERE, I'M GAB
         </h1>
-        <p className="font-Sans leading-[1.5] lg:text-[20px] pb-4">
+        <p className="font-Sans leading-[1.5] lg:text-[20px] pb-8 max-w-[1100px]">
           A dedicated and enthusiastic person, eager to kickstart my career in
           tech, driven by continuous learning and innovation, with a passion for{" "}
           <span className="font-bold">
@@ -32,8 +32,11 @@ const Header = () => {
           }}
         >
           my resume{" "}
-          <MdOutlineFileDownload size={23} style={{ marginLeft: "3px", marginBottom:"2px" }} />
+          <MdOutlineFileDownload size={23} style={{ marginLeft: "3px", marginBottom: "2px" }} />
         </Button>
+      </div>
+      <div className="max-lg:hidden scroll-icon absolute bottom-0 items-center">
+        <span className="scroll-icon__dot"></span>
       </div>
     </div>
   );
