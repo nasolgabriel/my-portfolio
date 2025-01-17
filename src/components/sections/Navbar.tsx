@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Brightness4 } from "@/assets/assets"; // Adjust the import based on your actual path
-import { Button } from "@mui/material";
+import { Brightness4 } from "@/assets/assets";
 import closeUpPic from "../../assets/gab-Photoroom.png";
 
 const Navbar = () => {
