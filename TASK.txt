@@ -1,0 +1,4 @@
+Tasks: 
+
+Optimization:
+1. move all the texts in a seperate file.
