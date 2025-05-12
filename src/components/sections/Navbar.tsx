@@ -25,7 +25,7 @@ const Navbar = () => {
         <Link href="#">ABOUT</Link>
         <Link href="#">PROJECTS</Link>
         <Link href="#">CONTACT</Link>
-        <Brightness4 className="cursor-pointer" />
+        {/* <Brightness4 className="cursor-pointer" /> */}
       </ul>
 
       {/* Hamburger MMenu Icon */}

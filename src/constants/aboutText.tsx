@@ -4,7 +4,7 @@ export const aboutMe1 =
 
 export const aboutMe2 = 
 `He is passionate about technology, finance, and software development, he has contributed to innovative projects 
-  and excels in frontend web development using tools like ReactJS, PyTorch, .NET, and NodeJS.`;
+  and excels in machine learning & frontend web development using tools like ReactJS, PyTorch, .NET, and NodeJS.`;
 
 export const aboutMe3 = 
 `Outside of coding, Gabriel enjoys video games, puzzles, running, and gym workouts, and although he may seem 
