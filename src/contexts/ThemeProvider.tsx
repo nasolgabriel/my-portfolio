@@ -29,8 +29,8 @@ const lightTheme: Theme = {
     text: "#000000",
   },
   fonts: {
-    body: "Source Sans 3, sans-serif",
-    heading: "Source Sans 3, sans-serif",
+    body: "Sansation, sans-serif",
+    heading: "Sansation, sans-serif",
   },
 };
 
