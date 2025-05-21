@@ -27,7 +27,7 @@ export default {
         foreground: "#f2f2f2", // Grey
       },
       fontFamily: {
-        sans: ["Source Sans 3", "sans-serif"],
+        sans: ["Sansation", "sans-serif"],
       },
     },
   },

@@ -10,7 +10,7 @@ const Header = () => {
     <div className="w-full h-screen flex flex-col justify-center items-center background-pattern px-5">
       <div className=" text-center lg:px-20 text-[#111] pb-15">
         <h1 className="font-Sans font-bold text-[40px] md:text-[25px] lg:text-[65px] leading-[1.3] mb-8 tracking-wider">
-          HELLO THERE, I'M GAB
+          HELLO THERE, I&apos;M GAB
         </h1>
         <p className="font-Sans leading-[1.5] lg:text-[20px] pb-8 max-w-[1100px]">
           A dedicated and enthusiastic person, eager to kickstart my career in

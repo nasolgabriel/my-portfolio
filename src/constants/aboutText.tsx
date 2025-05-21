@@ -8,7 +8,7 @@ export const aboutMe2 =
 
 export const aboutMe3 = 
 `Outside of coding, Gabriel enjoys video games, puzzles, running, and gym workouts, and although he may seem 
-  reserved at first, he values making new friends and sharing his passion for continuous learning.`; 
+  quiet-natured at first, he values making new friends and sharing his passion for continuous learning.`; 
 
 export const languages = 
   `Languages and Frameworks:`;

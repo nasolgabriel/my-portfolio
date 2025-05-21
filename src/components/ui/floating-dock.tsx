@@ -23,7 +23,7 @@ export type DockPosition =
   | "bottom"
   | "bottom-right";
 
-export const FloatingDock = <T extends any>({
+export const FloatingDock = ({
   items,
   position = "left-vertical",
   desktopClassName,
@@ -72,8 +72,8 @@ const FloatingDockDesktop = ({
   className?: string;
 }) => {
   // Track both axes
-  let mouseX = useMotionValue(Infinity);
-  let mouseY = useMotionValue(Infinity);
+  const mouseX = useMotionValue(Infinity);
+  const mouseY = useMotionValue(Infinity);
 
   return (
     <motion.div
@@ -212,7 +212,7 @@ function IconContainer({
   });
 
   // Refined size transformation with more subtle scaling
-  const sizeFromDistance = (min: number, max: number) =>
+  const useSizeFromDistance = (min: number, max: number) =>
     useTransform(distance, [-200, 0, 200], [min, max, min]);
 
   // Softer spring configuration for smoother animations
@@ -222,10 +222,10 @@ function IconContainer({
     damping: 10,
   };
 
-  const width = useSpring(sizeFromDistance(40, 70), springConfig);
-  const height = useSpring(sizeFromDistance(40, 70), springConfig);
-  const widthIcon = useSpring(sizeFromDistance(20, 35), springConfig);
-  const heightIcon = useSpring(sizeFromDistance(20, 35), springConfig);
+  const width = useSpring(useSizeFromDistance(40, 70), springConfig);
+  const height = useSpring(useSizeFromDistance(40, 70), springConfig);
+  const widthIcon = useSpring(useSizeFromDistance(20, 35), springConfig);
+  const heightIcon = useSpring(useSizeFromDistance(20, 35), springConfig);
 
   // More subtle horizontal shift
   const hoverX = useSpring(0, {

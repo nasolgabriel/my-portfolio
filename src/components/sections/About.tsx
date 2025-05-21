@@ -1,7 +1,6 @@
 "use client";
 
 import { Container, Stack, Typography } from "@mui/material";
-import React, { useEffect } from "react";
 import {
   aboutMe1,
   aboutMe2,
